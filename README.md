@@ -5,32 +5,32 @@ Per poder detectar quines cartes s'han tirat fem us d'una Xarxa Neuronal que pro
 Software:
 - Python 3.10.x
 - RPi.GPIO
+- Arduino
 
 Hardware:
 - Raspberry Pi
-- Camera
+- Camara
 - Arduino Nano
 - Sensor Ultrasó x2
 - Motor DC 
 - Altaveu
 - Mini Motor DC
-- Amplificador de sonido
+- Amplificador de soroll
 
 Como Jugar:
 - La partida comença SEMPRE amb el robot (es una forma de "timejar" tot)
-- Presiona el botó per començar la partida
-- El jugador quan rebi la notificació podrà tirar la carta al recipient.
-- Al finalitzar una de las rondes el jugador en cas de que el robot hagi guanyat tindrá que recarregar les cartes del robot
+- El jugador quan rebi la notificació podrà tirar la carta al recipient. (es necessari que el programa processi la carta primer)
+- Al finalitzar una de las rondes el jugador en cas de que el robot hagi guanyat tindrá que recarregar les cartes del robot, tindrá 20 segons avans que la ronda següent comenci
         - Agafa el recipient amb compte de no moure lo demés
         - Retira les cartes de dins
         - Deixa el recipient amb compte
         - Aixeca la tela que no deixa veure les cartes del robot y recarrega aixecant el suport del motor dc les cartes per sota
-        - Quan estiguis en la posició correcte apreta el botó per seguir jugant!
+        - Quan estiguis en la posició correcte espera a que els 20 segons acabin i continua!
 - El que Acabi amb totes les cartes guanya!
 
 
 
-Autores:
+Autors:
 - Valentí Torrents | 1604484
 - Guillermo Vivancos Alonso | 1606206
 - Eric Rodriguez | 1496793
