@@ -1,4 +1,4 @@
-*SLAPBOT*
+*SLAPBOT*:
 SlapBot es un robot capaç de jugar a les cartes, concretament al joc ("El Tapete"). El robot es composa en 4 parts, un mecanisme que carregua el "slap" del robot, un llença cartes, una càmera que es els "ulls" dels robot i uns sensors que detecten qui ha guanyat la ronda.
 Per poder detectar quines cartes s'han tirat fem us d'una Xarxa Neuronal que processa el que veu la càmera, li passa al algorisme el resultat i per tant es genera una acció.
 
