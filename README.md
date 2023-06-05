@@ -21,7 +21,10 @@ Hardware:
 - Mini Motor DC
 - Font alimentació (porta piles de 6. De 7,2V a 9V )
 - Controladora TB6612FNG (pels motors)
+- 
 ![Image text](https://github.com/1606206/SlapBot_RLP/blob/main/Hardware/esquema_hardware_slapbot.png)
+
+
 Src:
 -Arduino:
         Amb l'arduino (codi en c++) controlem els sensors i els motors (juntament amb la controladora) per detectar el moviment i controlar els moviments dels motors quan calgui.
