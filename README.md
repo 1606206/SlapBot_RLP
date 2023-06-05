@@ -21,7 +21,7 @@ Hardware:
 - Mini Motor DC
 - Font alimentació (porta piles de 6. De 7,2V a 9V )
 - Controladora TB6612FNG (pels motors)
-- 
+
 ![Image text](https://github.com/1606206/SlapBot_RLP/blob/main/Hardware/esquema_hardware_slapbot.png)
 
 
