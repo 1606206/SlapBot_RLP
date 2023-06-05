@@ -9,7 +9,9 @@ sudo docker pull roboflow/inference-server:cpu
 sudo docker run --net=host roboflow/inference-server:cpu
 
 # Terminal 2 executar les dues comandes següents quan a terminal 1 surti que inference-server està llest per rebre tràfic:
+### Paso 1
 python -m venv raspi
+### Paso 2
 source raspi/bin/activate
 
 A partir d'aquí executar el programa a la terminal 2 (si no està instal·lat roboflow fer: pip install roboflow al terminal 2):
