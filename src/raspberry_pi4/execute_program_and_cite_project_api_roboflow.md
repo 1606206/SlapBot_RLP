@@ -1,3 +1,5 @@
+# S'utilitza com API de Roboflow per a visió per computador un model ja entrenat.
+
 # Crear un docker a la terminal de la raspberry pi:
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
