@@ -89,7 +89,7 @@ void ataca() {
 
 void tirarCarta() {
   enableMotors();
-
+  //tira endavant per llençar carta i endarrera per recollir la següent i que no és llenci també; el segon moviment com a correcció del primer moviment
   moveA(backward, 140);
   delay(200);
 
