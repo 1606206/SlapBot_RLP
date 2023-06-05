@@ -9,7 +9,7 @@ Software:
 - C++ (con arduino)
 
 API:
-- Un projecte de roboflow per a detecció de cartes (detellat a src/raspberry_pi4/execute_program_and_cite_project_api_roboflow)
+- Un projecte de roboflow per a detecció de cartes (detallat a src/raspberry_pi4/execute_program_and_cite_project_api_roboflow)
 
 Hardware:
 - Raspberry Pi 4
@@ -28,14 +28,20 @@ Src:
         En el cas dels sensors detecten qui pica a la taula abans, ja sigui quan hi ha una combinació o quan algun jugador pica a la taula sense que el robot hagi detectat una combinació; ja que també hi ha la probabilitat que l'API utiltizada per reconèixer les cartes falli i no detecti una possible combinació. Quan els sensors detecten que o el robot o un jugador ha picat a la taula l'arduino envia la senyal a la raspberry pi 4 per a que ho sàpiga.
 
 -Neural_Network:
+        Hem creat una xarxa neuronal entrenant un model el qual a partir d'una imatge de cadascuna de les cartes a sobre del taulell s'entrenava. Al entrenar la xarxa neuronal ens donava un molt bon accuracy tant de train com de test (els dos superiors a 0,9) com es pot veure al fitxer .ipynb però el testejar-ho jugant amb el robot no obteniem els resultats esperats. Finalment s'ha decidit fer ús d'un projecte de Roboflow de detecció de cartes però, així i tot a la carpeta corresponent s'hi pot trobar el codi emprat per entrenar la xarxa, el model obtingut, la funció amb la qual a partir del model obteniem la predicció de la carta i un exemple de com el cridariem des del programa.
 
 -Raspberry_pi4:
+        Hem implementat el codi necessàri per l'execució normal del programa, i també la comunicació amb l'arduino, la càmera i l'API per a detecció de cartes. Al corresponent .md de la carpeta src/raspberry_pi4 està explicat com executar el programa.
+        
+        El programa principal es basa en el següent:
+        ![imatge](/src/diagrama_software.png)
+
 
 
 
 Com Jugar:
 - La partida i la ronda la comença SEMPRE el robot (es una forma de "timejar" tot)
-- El jugador quan rebi la notificació podrà tirar la carta al recipient
+- Quan és el torn del robot, tira una carta utilitzant el motor DC del llença-cartes. En cas que hagi de tirar més d'una carta seguida, ho farà un cop detecti la última carta tirada. En cas que sigui el torn d'algun dels jugadors, anirà detectant totes les cartes que tirin, fins que li toqui tirar de nou al robot. Seguint les normes del Tapete, el robot haurà de donar un cop a la taula quan hi hagi 2 cartes seguides amb el mateix número, o un "sandwich"(dos cartes iguals separades per una diferent), i ho farà amb l'altre motor DC que utilitzem pel braç. Tanmateix, el/s jugador/s hauran de picar entre l'altre sensor i la pila de cartes perquè així el robot pugui detectar si ha guanyat ell o els altres jugadors. Un cop algun dels jugadors (o el robot) s'emporti les cartes, ja sigui perquè ha picat primer, o perquè se les emporta jugant, el robot farà una pausa de 20 segons per donar temps que es reiniciï la ronda.
 - Al finalitzar una de las rondes el jugador en cas de que el robot hagi guanyat tindrá que recarregar les cartes del robot, tindrá 20 segons abans que la ronda següent comenci:
         - Agafa el recipient amb compte de no moure res més
         - Retira les cartes de dins
