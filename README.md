@@ -37,7 +37,7 @@ El programa principal es basa en el següent:
 
 ![Image text](https://github.com/1606206/SlapBot_RLP/blob/main/src/diagrama_software.jpg)
 
-
+Per passar torn es passa sempre el tirar una sola carta sempre i quan el jugador anterior no hagi tirat una de les cartes especials (J, Q, K, A). Si es dona el cas que el jugador anterior ha tirat una de les cartes especials, J, Q, K o A, caldrà que el jugador actual tiri una, dues, tres o quatre cartes respectivaments fins que alguna d'aquestes també sigui una carta especial i salvar-se. Si una d'aquest numero limitat de cartes que pot tirar "per salvar-se" és una carta especial llavors li passa "la patata calenta" al següent jugador. Si per contra el jugador tira el numero de cartes que pot tirar per salvar-se però no ho aconsegueix, llavors guanya el jugador anterior les cartes i torna a començar les rondes
 
 
 Com Jugar:
