@@ -34,7 +34,7 @@ Src:
         Hem implementat el codi necessàri per l'execució normal del programa, i també la comunicació amb l'arduino, la càmera i l'API per a detecció de cartes. Al corresponent .md de la carpeta src/raspberry_pi4 està explicat com executar el programa.
         
         El programa principal es basa en el següent:
-        ![imatge](/src/diagrama_software.png)
+        ![imatge](https://github.com/1606206/SlapBot_RLP/blob/main/src/diagrama_software.png)
 
 
 
